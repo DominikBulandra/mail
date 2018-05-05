@@ -1,4 +1,4 @@
-1524828889a:1:{s:18:"content-models.htm";a:7:{s:8:"fileName";s:18:"content-models.htm";s:7:"content";s:417:"[viewBag]
+1525517109a:1:{s:18:"content-models.htm";a:7:{s:8:"fileName";s:18:"content-models.htm";s:7:"content";s:417:"[viewBag]
 title = "Models"
 url = "/content/models"
 layout = "content"
@@ -9,7 +9,7 @@ navigation_hidden = 0
     Just like Static Pages and Content files, some Plugins support translations out of the box.
     Try the installing <strong>RainLab.Forum</strong> plugin to see how the Forum channels can be translated.
 </p>
-<figure data-snippet="theme-image" data-property-src="forum-example.png"></figure>";s:5:"mtime";i:1524572438;s:6:"markup";s:301:"<p>
+<figure data-snippet="theme-image" data-property-src="forum-example.png"></figure>";s:5:"mtime";i:1524990512;s:6:"markup";s:301:"<p>
     Just like Static Pages and Content files, some Plugins support translations out of the box.
     Try the installing <strong>RainLab.Forum</strong> plugin to see how the Forum channels can be translated.
 </p>

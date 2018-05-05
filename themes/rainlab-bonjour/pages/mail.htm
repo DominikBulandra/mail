@@ -81,6 +81,7 @@ is_hidden = 0
                             </span>
                 </div>
             <input name="about" type="hidden">
+            <input name="about2">
             <div id="editor-container"></div>
             <button class="btn btn-primary" type="submit">Wyślij mailing</button>
           
@@ -95,6 +96,12 @@ is_hidden = 0
   test licznika
 </div>
 <p> z 10</p>
+
+<DiV>
+    <H1>Ilość adresów na które nie został wysłany mail</H1>
+    <P>{{notsend}}</P>
+</DiV>
+
 <script>
 var quill = new Quill('#editor-container', {
   modules: {

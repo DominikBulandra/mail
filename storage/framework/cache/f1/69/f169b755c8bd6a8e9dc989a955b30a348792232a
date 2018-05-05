@@ -1,4 +1,4 @@
-1524828889a:1:{s:16:"content-urls.htm";a:7:{s:8:"fileName";s:16:"content-urls.htm";s:7:"content";s:834:"[viewBag]
+1525517109a:1:{s:16:"content-urls.htm";a:7:{s:8:"fileName";s:16:"content-urls.htm";s:7:"content";s:834:"[viewBag]
 title = "URLs"
 url = "/content/urls"
 layout = "content"
@@ -20,7 +20,7 @@ navigation_hidden = 0
 </p>
 
 <figure data-snippet="theme-image" data-property-src="component-picker.png"></figure>
-";s:5:"mtime";i:1524572438;s:6:"markup";s:474:"<p>Would you prefer to include the language code in the page URL? It is possible to preset the desired locale by using a URL prefix.</p>
+";s:5:"mtime";i:1524990512;s:6:"markup";s:474:"<p>Would you prefer to include the language code in the page URL? It is possible to preset the desired locale by using a URL prefix.</p>
 
 <p>For example: <strong>http://yoursite.com/en</strong></p>
 

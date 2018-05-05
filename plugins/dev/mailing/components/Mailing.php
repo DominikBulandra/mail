@@ -20,13 +20,18 @@ class Mailing extends ComponentBase
                 'description' => 'Mailing app'
             ];
 
-        }
+        } 
         public function onRun() {
             $users = Db::table('dev_mailing_emails')
             ->select('email')
             ->where('active', '=', 1)
             ->get();
+            $notsend = Db::table('dev_mailing_emails')
+            ->select('email')
+            ->where('active', '=', 0)
+            ->count();
             $this->page['size2'] = $users;
+            $this->page['notsend'] = $notsend;
            }
 
     public function onSend()
@@ -39,14 +44,14 @@ class Mailing extends ComponentBase
         ->get();
 
 
-        $vars = ['name' => 'Test', 'email' => 'michr21@gmail.com','content' => Input::get('about')];
+        $vars = ['name' => 'Test', 'email' => 'michr21@gmail.com','content' => Input::get('about2')];
         foreach ($users as $value){
            
        
            // for ($x = 0; $x <= 10; $x++) {
                 //$this->page['size3'] = $x;
                 $test=$value->email;
-                Mail::send('dev.mailing::mail.message', $vars, function($message) use ($test) {
+                Mail::send(['html' => 'dev.mailing::mail.message'], $vars, function($message) use ($test) {
                     
                                 $message->to($test, 'Michal');
                         

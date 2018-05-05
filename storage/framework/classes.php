@@ -120,4 +120,5 @@
   'Romanov\\Flashmessage\\Components\\FormError' => 'plugins\\romanov\\flashmessage\\components\\FormError.php',
   'october\\drivers\\Plugin' => 'plugins\\october\\drivers\\Plugin.php',
   'dev\\mailing\\Models\\Emails' => 'plugins\\dev\\mailing\\models\\Emails.php',
+  'system\\Controllers\\mailbrandsettings' => 'modules\\system\\controllers\\mailbrandsettings.php',
 );
