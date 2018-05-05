@@ -1,4 +1,4 @@
-1525517109a:1:{s:8:"mail.htm";a:10:{s:8:"fileName";s:8:"mail.htm";s:7:"content";s:5193:"title = "mail"
+1525520375a:1:{s:8:"mail.htm";a:10:{s:8:"fileName";s:8:"mail.htm";s:7:"content";s:5193:"title = "mail"
 url = "/mail"
 layout = "default"
 is_hidden = 0
@@ -143,7 +143,7 @@ setInterval(function () {
 
 </script>
 
-";s:5:"mtime";i:1525516420;s:6:"markup";s:5106:"{% component 'mailing' %}
+";s:5:"mtime";i:1525518262;s:6:"markup";s:5106:"{% component 'mailing' %}
 {% framework %}
 {% framework extras %}
 

@@ -45,7 +45,7 @@ class import extends ComponentBase
         $header = false;
    		 } elseif($csvLine[6]!='-') {
         Db::table('dev_mailing_emails')->insert(
-    ['email' => $csvLine[6] ]
+    ['email' => $csvLine[6],'active' => '0' ]
 );
         
     }

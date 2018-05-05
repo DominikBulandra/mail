@@ -54,7 +54,7 @@ return [
     | used globally for all e-mails that are sent by your application.
     |
     */
-    'from' => ['address' => 'test123@pl-architects.com', 'name' => 'OctoberCMS'],
+    'from' => ['address' => 'test123@pl-architects.com', 'name' => 'Plugstudio'],
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol

@@ -48,7 +48,7 @@ class Mailing extends ComponentBase
         foreach ($users as $value){
            
        
-           // for ($x = 0; $x <= 10; $x++) {
+            //for ($x = 0; $x <= 1000; $x++) {
                 //$this->page['size3'] = $x;
                 $test=$value->email;
                 Mail::send(['html' => 'dev.mailing::mail.message'], $vars, function($message) use ($test) {
@@ -56,7 +56,7 @@ class Mailing extends ComponentBase
                                 $message->to($test, 'Michal');
                         
                                 
-                                $message->subject('mailing');
+                                $message->subject('Plugstudio');
                     
                             });
                 
