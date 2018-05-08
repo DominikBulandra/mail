@@ -1,0 +1,81 @@
+1525763905a:1:{s:15:"fullImageBg.htm";a:7:{s:8:"fileName";s:15:"fullImageBg.htm";s:7:"content";s:1716:"description = "Full Image Background"
+
+[staticPage]
+useContent = 0
+default = 0
+==
+<?php
+function onStart()
+{
+    $this->addCss('assets/css/fullImageBg.css');
+}
+?>
+==
+{% partial 'site/head' %}
+{% partial 'site/scrollingNavbar' %}
+
+{variable name="introTitle" label="Intro Title" tab="Intro" type="text"}{/variable}
+{variable name="tagline" label="Tagline" tab="Intro" type="text"}{/variable}
+{variable name="btn1Text" label="Button 1 Text" tab="Intro" type="text"}{/variable}
+{variable name="btn1Link" label="Button 1 Link" tab="Intro" type="text"}{/variable}
+{variable name="btn2Text" label="Button 2 Text" tab="Intro" type="text"}{/variable}
+{variable name="btn2Link" label="Button 2 Link" tab="Intro" type="text"}{/variable}
+{variable name="bgImage" label="Background Image" tab="Intro" type="mediafinder" mode="image"}{/variable}
+
+{% set bg = bgImage %}
+<!--Mask-->
+<div class="view hm-black-light"
+     style="background: url({% if bg == '' %}'https://mdbootstrap.com/img/Photos/Others/images/79.jpg'{% else %}{{ bgImage|media }}{% endif %})
+             no-repeat center center fixed;">
+    <div class="full-bg-img flex-center">
+        <ul class="animated fadeInUp">
+            <li>
+                <h1 class="display-3 mb-4 font-bold">{{ introTitle }}</h1></li>
+            <li>
+                <h3 class="mb-5">{{ tagline }}</h3>
+            </li>
+            <li>
+                <a target="_blank" href="{{ btn1Link }}" class="btn btn-primary btn-lg" rel="nofollow">{{ btn1Text }}</a>
+                <a target="_blank" href="{{ btn2Link }}" class="btn btn-outline-white btn-lg" rel="nofollow">{{ btn2Text }}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--/.Mask-->
+
+{% partial 'site/footer' %}";s:5:"mtime";i:1525763117;s:6:"markup";s:1550:"{% partial 'site/head' %}
+{% partial 'site/scrollingNavbar' %}
+
+{variable name="introTitle" label="Intro Title" tab="Intro" type="text"}{/variable}
+{variable name="tagline" label="Tagline" tab="Intro" type="text"}{/variable}
+{variable name="btn1Text" label="Button 1 Text" tab="Intro" type="text"}{/variable}
+{variable name="btn1Link" label="Button 1 Link" tab="Intro" type="text"}{/variable}
+{variable name="btn2Text" label="Button 2 Text" tab="Intro" type="text"}{/variable}
+{variable name="btn2Link" label="Button 2 Link" tab="Intro" type="text"}{/variable}
+{variable name="bgImage" label="Background Image" tab="Intro" type="mediafinder" mode="image"}{/variable}
+
+{% set bg = bgImage %}
+<!--Mask-->
+<div class="view hm-black-light"
+     style="background: url({% if bg == '' %}'https://mdbootstrap.com/img/Photos/Others/images/79.jpg'{% else %}{{ bgImage|media }}{% endif %})
+             no-repeat center center fixed;">
+    <div class="full-bg-img flex-center">
+        <ul class="animated fadeInUp">
+            <li>
+                <h1 class="display-3 mb-4 font-bold">{{ introTitle }}</h1></li>
+            <li>
+                <h3 class="mb-5">{{ tagline }}</h3>
+            </li>
+            <li>
+                <a target="_blank" href="{{ btn1Link }}" class="btn btn-primary btn-lg" rel="nofollow">{{ btn1Text }}</a>
+                <a target="_blank" href="{{ btn2Link }}" class="btn btn-outline-white btn-lg" rel="nofollow">{{ btn2Text }}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--/.Mask-->
+
+{% partial 'site/footer' %}";s:4:"code";s:71:"function onStart()
+{
+    $this->addCss('assets/css/fullImageBg.css');
+}";s:11:"description";s:21:"Full Image Background";s:10:"staticPage";a:2:{s:10:"useContent";s:1:"0";s:7:"default";s:1:"0";}}}

@@ -6,8 +6,8 @@ is_hidden = 0
 [mailing]
 ==
 {% component 'mailing' %}
-{% framework %}
-{% framework extras %}
+
+
 
 <div class="modal-content" style="border-radius:5px;
             background-color:white;
@@ -35,7 +35,7 @@ is_hidden = 0
         >
                 <label>Treść wiadomości</label>
 
-                <div id="toolbar">
+                <div id="toolbar" >
                             <span class="ql-formats">
                                 <select class="ql-font"></select>
                                 <select class="ql-size"></select>
@@ -81,7 +81,18 @@ is_hidden = 0
                             </span>
                 </div>
             <input name="about" type="hidden">
-            <input name="about2">
+            <input name="about2" value="projektowaniem
+            systemowych rozwiązań
+            architektoniczno-budowlanych dla
+            przedsiębiorców" type="hidden">
+            <BR>
+            <input name="about3" value="doradzimy
+            i zaproponujemy gotowe lub
+            indywidualne rozwiązanie dla" type="hidden">
+            <br>
+            <input name="about4" value="Jeżeli
+            jesteś zainteresowany naszą ofertą
+            kliknij poniższy link" type="hidden">
             <div id="editor-container"></div>
             <button class="btn btn-primary" type="submit">Wyślij mailing</button>
           
@@ -91,6 +102,13 @@ is_hidden = 0
         <img src="{{ 'assets/images/icon_loading_email_512px.gif' | theme }}" alt="loading..." style="width: 200px;height: 200px; margin-left: 35%">
       </div>
 </div>
+<form 
+data-request="onTest"
+data-request-flash="#flash"
+>
+<input name="email">
+<button class="btn btn-primary" type="submit">Testuj</button>
+</form>
 <p>Wiadomość </p>
 <div id="licznik">
   test licznika
