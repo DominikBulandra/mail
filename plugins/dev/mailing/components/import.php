@@ -37,27 +37,28 @@ class import extends ComponentBase
     {
         set_time_limit(0);
     	$handle = fopen(Input::file('file'), "r");
-		$header = true;
+        $header = true;
+        $column=Input::get('column');
 
 		while ($csvLine = fgetcsv($handle, 0, ";")) {
 
    		 if ($header) {
         $header = false;
-   		 } elseif($csvLine[6]!='-') {
+   		 } elseif(strpos($csvLine[$column], '@')) {
         Db::table('dev_mailing_emails')->insert(
-    ['email' => $csvLine[6],'active' => '0' ]
+    ['email' => $csvLine[$column],'active' => '0' ]
 );
         
     }
 }
-    	 return Redirect::to('');
+    	 return Redirect::to('/mail');
     }
     public function onDelete()
     {
     	
         Db::table('dev_mailing_emails')->delete();
    
-    	 return Redirect::to('');
+    	 return Redirect::to('/mail');
     }
 
 }

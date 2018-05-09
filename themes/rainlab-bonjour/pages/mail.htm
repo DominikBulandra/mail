@@ -4,152 +4,140 @@ layout = "default"
 is_hidden = 0
 
 [mailing]
+
+[import]
 ==
 {% component 'mailing' %}
 
+    <section class="mbr-section form3 cid-qRrv590Qvl" id="form3-i">
+                                                  
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="title col-12 col-lg-8">
+                  <h2 class="align-center pb-2 mbr-fonts-style display-2">
+                      Mailing PLUGSTUDIO</h2>
+                  <h3 class="mbr-section-subtitle align-center pb-5 mbr-light mbr-fonts-style display-5">
+                      Wyślij mailing na adresy z bazy!</h3>
+              </div>
+             
+          </div>
+  
+          
+          <div class="row py-2 justify-content-center">
+              <div class="col-12 col-lg-6  col-md-8 ">
+                  
+                {{ form_open({ files: true ,request: 'onSave', class: 'mbr-form'}) }}
+                    <input type="hidden" name="file"  data-form-field="file">
+                      <div class="mbr-subscribe input-group">
+                          <input class="form-control" type="file" name="file" placeholder="Import bazy csv" required="" id="email-form3-i" style="border-radius: 100px !important; width: 50%">
+                          <input class="form-control" name="column" value="6" data-form-field="column" id="email-form3-i" style="border-radius: 100px !important; width: 30px"> 
+                          <span class="input-group-btn">
+                            <button type="submit" class="btn btn-primary display-4">Import</button>
+                         </span>
+                      </div>
+                {{ form_close() }}
 
 
-<div class="modal-content" style="border-radius:5px;
-            background-color:white;
-            padding:40px;
-            margin: 10%;
-            margin-left: 25%;
-            min-height: 500px;
-            max-width: 1000px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-           ">
 
-    <div class="modal-body">
+                {{ form_open({request: 'onDelete', class: 'mbr-form'}) }}
 
-
-      {% flash success %}
-      <div id="flash" class="alert alert-success" role="alert">{{ message }}</div>
-      {% endflash %}
-
-
-        <form 
+                <button style="margin-left: 28%; background-color: #F2DEDE" class="btn btn-danger dislay-4" type="submit" >Usuń adresy z bazy</button>
+                {{ form_close() }}
+                  <form style="padding-top: 15%" data-request="onTest" data-request-flash="#flash" class="mbr-form" action="" method="post"><input type="hidden" name="email" data-form-email="true" value="iDS/96ZCXrfAx/BOvOApH+6Tar0n7tTxgElz+Yc7rDs4JbWEi6Acjzgg5fngaJM0cXHaaBuEhR1UpnqOacPwAmf/n56MnfaTJ5oa8s5QJvAA2EcEdIcVOuaLB6KXSmUt" data-form-field="Email">
+                    <div class="mbr-subscribe input-group">
+                        <input class="form-control" type="email" name="email" placeholder="Wpisz email testowy" data-form-field="Email" required="" id="email-form3-i">
+                        <span class="input-group-btn">
+                            <button onclick="notify()" id="test" href="" type="submit" class="btn btn-primary display-4">Test</button>
+                        </span>
+                    </div>
+                </form>
+                    
+              </div>
+          </div>
+      </div>
+  </section>
+  
+        
+ 
+  <section class="engine"><a href="">css templates</a></section><section class="mbr-section content8 cid-qRrwYzzAVf" id="content8-j">
+  
+        <div class="animated fadeIn" id="load" style="display:none">
+                <img src="{{ 'assets/images/icon_loading_email_512px.gif' | theme }}" alt="loading..." style="width: 200px;height: 200px;margin-left: 45%">
+            </div>
+    <form 
         onsubmit="getData()" 
         data-request="onSend"
         data-request-loading="#load"
         data-request-flash="#flash"
         >
-                <label>Treść wiadomości</label>
+        <label>Limit maili.</label>
+        <input class="form-control" name="limit" value="500" id="email-form3-i" style="border-radius: 100px !important; width: 60px;">
 
-                <div id="toolbar" >
-                            <span class="ql-formats">
-                                <select class="ql-font"></select>
-                                <select class="ql-size"></select>
-                                </span>
-                    <span class="ql-formats">
-                                <button class="ql-bold"></button>
-                                <button class="ql-italic"></button>
-                                <button class="ql-underline"></button>
-                                <button class="ql-strike"></button>
-                            </span>
-                    <span class="ql-formats">
-                                <select class="ql-color"></select>
-                                <select class="ql-background"></select>
-                                </span>
-                    <span class="ql-formats">
-                                <button class="ql-script" value="sub"></button>
-                                <button class="ql-script" value="super"></button>
-                            </span>
-                    <span class="ql-formats">
-                                <button class="ql-header" value="1"></button>
-                                <button class="ql-header" value="2"></button>
-                                <button class="ql-blockquote"></button>
-                                <button class="ql-code-block"></button>
-                            </span>
-                    <span class="ql-formats">
-                                <button class="ql-list" value="ordered"></button>
-                                <button class="ql-list" value="bullet"></button>
-                                <button class="ql-indent" value="-1"></button>
-                                <button class="ql-indent" value="+1"></button>
-                            </span>
-                    <span class="ql-formats">
-                                <button class="ql-direction" value="rtl"></button>
-                                <select class="ql-align"></select>
-                            </span>
-                    <span class="ql-formats">
-                                <button class="ql-link"></button>
-                                <button class="ql-image"></button>
-                                <button class="ql-video"></button>
-                                <button class="ql-formula"></button>
-                            </span>
-                    <span class="ql-formats">
-                                <button class="ql-clean"></button>
-                            </span>
+      <div class="container">
+          <div class="media-container-row title">
+              <div class="col-12 col-md-8">
+                  
+                    <div class="mbr-section-btn align-center">
+                            
+                        <button type="submit" class="btn btn-black-outline display-4" style="border-radius: 100px !important">
+                            <span class="socicon socicon-mail mbr-iconfont mbr-iconfont-btn" id="load"></span>
+                            Wyślij maile&nbsp;
+                        </button>
+                        
+                       
+                    </div>
+                   
                 </div>
-            <input name="about" type="hidden">
-            <input name="about2" value="projektowaniem
-            systemowych rozwiązań
-            architektoniczno-budowlanych dla
-            przedsiębiorców" type="hidden">
-            <BR>
-            <input name="about3" value="doradzimy
-            i zaproponujemy gotowe lub
-            indywidualne rozwiązanie dla" type="hidden">
-            <br>
-            <input name="about4" value="Jeżeli
-            jesteś zainteresowany naszą ofertą
-            kliknij poniższy link" type="hidden">
-            <div id="editor-container"></div>
-            <button class="btn btn-primary" type="submit">Wyślij mailing</button>
-          
-        </form>
+               
+          </div>
       </div>
-      <div class="animated bounceIn" id="load" style="display:none">
-        <img src="{{ 'assets/images/icon_loading_email_512px.gif' | theme }}" alt="loading..." style="width: 200px;height: 200px; margin-left: 35%">
+      
+
+
+      </form>
+   
+  </section>
+ 
+
+
+ 
+        <strong> {% flash success %}
+                <div id="flash" class="alert alert-success" role="alert">{{ message }}</div>
+                {% endflash %}</strong>
+
+  
+  <div style="background-color: #DFF0D8; color: #739F72" class="animated fadeIn alert alert-warning" id="size" style="display: none" >
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Uwaga</strong> Ilość adresów w bazie: {{size}}
+  </div>
+
+  <div style="background-color: #FCF8E3; color: #977D4E" class="animated fadeIn alert alert-warning" id="notsend" style="display: none" >
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Uwaga</strong> Ilość maili na które nie została wysłana wiadomość: {{notsend}}
+  </div>
+
+
+  <section once="" class="cid-qRrxfr9DQp" id="footer6-k">      
+  
+      <div class="container">
+          <div class="media-container-row align-center mbr-white">
+              <div class="col-12">
+                  <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                      © Mailing webApp Dominik&amp;Michal</p>
+              </div>
+          </div>
       </div>
-</div>
-<form 
-data-request="onTest"
-data-request-flash="#flash"
->
-<input name="email">
-<button class="btn btn-primary" type="submit">Testuj</button>
-</form>
-<p>Wiadomość </p>
-<div id="licznik">
-  test licznika
-</div>
-<p> z 10</p>
+  </section>
 
-<DiV>
-    <H1>Ilość adresów na które nie został wysłany mail</H1>
-    <P>{{notsend}}</P>
-</DiV>
-
-<script>
-var quill = new Quill('#editor-container', {
-  modules: {
-    toolbar: '#toolbar',
-  },
-  placeholder: 'Utwórz wiadomość',  
-  theme: 'snow'
-});
-
-
-var form = document.querySelector('form');
-function getData() {
-  // Populate hidden form on submit
-  var about = document.querySelector('input[name=about]');
-  //var html = about.value = JSON.stringify(quill.getContents());
   
 
-  //Zamiana delta -> html 
-  var justHtml = quill.root.innerHTML;
-  //Przypisanie do input '#about' wartości z edytora quill 
-  var html = about.value = justHtml;
-
-  //Odczyt wartości z formy
-  console.log(justHtml ,$(form).serialize(), $(form).serializeArray());
+  <script>
+ 
+    
 
 
-  // No back end to actually submit to!
-  alert('Open the console to see the submit data!')
-  return false;
-};
+
+
 setInterval(function () {
        
         document.getElementById('licznik').innerHTML= '{{size3}}';
@@ -159,5 +147,9 @@ setInterval(function () {
 
 
 
-</script>
 
+function notify(){
+    $('#notsend').css("display","");
+};
+
+</script>

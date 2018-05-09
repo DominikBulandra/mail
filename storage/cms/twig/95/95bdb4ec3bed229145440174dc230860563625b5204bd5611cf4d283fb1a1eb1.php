@@ -20,64 +20,60 @@ class __TwigTemplate_64f924aad622709852ee09601521a96e3406af8a83fac9c459619f97b42
 <html>
     <head>
 
-        <meta charset=\"utf-8\">
+        <meta charset=\"UTF-8\">
         <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-        <!-- Main Quill library -->
-        <script src=\"//cdn.quilljs.com/1.3.6/quill.js\"></script>
-        <script src=\"//cdn.quilljs.com/1.3.6/quill.min.js\"></script>
+        <meta name=\"generator\" content=\"Mobirise v4.7.2, mobirise.com\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1\">
+
+ 
 
         <!-- Theme included stylesheets -->
-        <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-        <link rel='stylesheet prefetch' href='http://cdn.quilljs.com/1.3.6/quill.snow.css'>
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-        <script src='http://cdn.quilljs.com/1.3.6/quill.js'></script>
-        <link href=\"http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css\" rel=\"stylesheet\">
         <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css\">
         ";
-        // line 18
+        // line 14
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/meta"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 19
+        // line 15
         echo "      
-
-    <body class=\"hold-transition sidebar-mini\">
+      
+    <body>
   
-        <!-- Header -->
+        <!-- Header
         <header id=\"layout-header\">
         </header>
-
-        <!-- Nav -->
-        ";
-        // line 28
+        --> 
+        <!-- Nav 
+            ";
+        // line 24
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/nav"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 29
-        echo "        
-
+        echo "      
+        -->
         <!-- Content -->
         <section id=\"layout-content\">
             ";
-        // line 33
+        // line 28
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 34
+        // line 29
         echo "        </section>
 
         <!-- Help Popups -->
         ";
-        // line 37
+        // line 32
         $context['__placeholder_help_default_contents'] = null;        echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('help', $context['__placeholder_help_default_contents']);
-        unset($context['__placeholder_help_default_contents']);        // line 38
+        unset($context['__placeholder_help_default_contents']);        // line 33
         echo "
         <!-- Scripts -->
         ";
-        // line 40
+        // line 35
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/scripts"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 41
-        echo "    </body>
+        // line 36
+        echo "     
+    </body>
 </html>";
     }
 
@@ -93,7 +89,7 @@ class __TwigTemplate_64f924aad622709852ee09601521a96e3406af8a83fac9c459619f97b42
 
     public function getDebugInfo()
     {
-        return array (  80 => 41,  76 => 40,  72 => 38,  70 => 37,  65 => 34,  63 => 33,  57 => 29,  53 => 28,  42 => 19,  38 => 18,  19 => 1,);
+        return array (  75 => 36,  71 => 35,  67 => 33,  65 => 32,  60 => 29,  58 => 28,  49 => 24,  38 => 15,  34 => 14,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -102,32 +98,27 @@ class __TwigTemplate_64f924aad622709852ee09601521a96e3406af8a83fac9c459619f97b42
 <html>
     <head>
 
-        <meta charset=\"utf-8\">
+        <meta charset=\"UTF-8\">
         <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-        <!-- Main Quill library -->
-        <script src=\"//cdn.quilljs.com/1.3.6/quill.js\"></script>
-        <script src=\"//cdn.quilljs.com/1.3.6/quill.min.js\"></script>
+        <meta name=\"generator\" content=\"Mobirise v4.7.2, mobirise.com\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1\">
+
+ 
 
         <!-- Theme included stylesheets -->
-        <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-        <link rel='stylesheet prefetch' href='http://cdn.quilljs.com/1.3.6/quill.snow.css'>
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-        <script src='http://cdn.quilljs.com/1.3.6/quill.js'></script>
-        <link href=\"http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css\" rel=\"stylesheet\">
         <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css\">
         {% partial 'site/meta' %}
       
-
-    <body class=\"hold-transition sidebar-mini\">
+      
+    <body>
   
-        <!-- Header -->
+        <!-- Header
         <header id=\"layout-header\">
         </header>
-
-        <!-- Nav -->
-        {% partial 'site/nav' %}
-        
-
+        --> 
+        <!-- Nav 
+            {% partial 'site/nav' %}      
+        -->
         <!-- Content -->
         <section id=\"layout-content\">
             {% page %}
@@ -138,6 +129,7 @@ class __TwigTemplate_64f924aad622709852ee09601521a96e3406af8a83fac9c459619f97b42
 
         <!-- Scripts -->
         {% partial 'site/scripts' %}
+     
     </body>
 </html>", "C:\\xampp\\htdocs\\devmail/themes/rainlab-bonjour/layouts/default.htm", "");
     }

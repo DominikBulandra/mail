@@ -61,16 +61,46 @@ class __TwigTemplate_32051932ca08a8a5e69f5083a93f0b54405d71ba9750a3de04b435553f3
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
         // line 16
-        echo "<link href=\"";
+        echo "<!--
+    <link href=\"";
+        // line 17
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter(array(0 => "assets/css/theme.css"));
-        // line 18
+        // line 19
         echo "\" rel=\"stylesheet\">
+-->
 
-
- <link href=\"http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css\" rel=\"stylesheet\">
-        <link href=\"http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css\" rel=\"stylesheet\">
-        <script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>
-        <script src=\"http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js\"></script>";
+<link rel=\"stylesheet\" href=\"";
+        // line 22
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/css/style.min.css");
+        echo "\">
+<link rel=\"stylesheet\" href=\"";
+        // line 23
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/tether/tether.min.css");
+        echo "\">
+<link rel=\"stylesheet\" href=\"";
+        // line 24
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/bootstrap/css/bootstrap.min.css");
+        echo "\">
+<link rel=\"stylesheet\" href=\"";
+        // line 25
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/bootstrap/css/bootstrap-grid.min.css");
+        echo "\">
+<link rel=\"stylesheet\" href=\"";
+        // line 26
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/bootstrap/css/bootstrap-reboot.min.css");
+        echo "\">
+<link rel=\"stylesheet\" href=\"";
+        // line 27
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/socicon/css/styles.css");
+        echo "\">
+<link rel=\"stylesheet\" href=\"";
+        // line 28
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/theme/css/style.css");
+        echo "\">
+<link rel=\"stylesheet\" href=\"";
+        // line 29
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/mobirise/css/mbr-additional.css");
+        echo "\" type=\"text/css\">";
     }
 
     public function getTemplateName()
@@ -85,7 +115,7 @@ class __TwigTemplate_32051932ca08a8a5e69f5083a93f0b54405d71ba9750a3de04b435553f3
 
     public function getDebugInfo()
     {
-        return array (  67 => 18,  64 => 16,  61 => 15,  57 => 14,  52 => 11,  46 => 9,  44 => 8,  36 => 6,  31 => 4,  24 => 3,  22 => 2,  19 => 1,);
+        return array (  102 => 29,  98 => 28,  94 => 27,  90 => 26,  86 => 25,  82 => 24,  78 => 23,  74 => 22,  69 => 19,  67 => 17,  64 => 16,  61 => 15,  57 => 14,  52 => 11,  46 => 9,  44 => 8,  36 => 6,  31 => 4,  24 => 3,  22 => 2,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -105,14 +135,19 @@ class __TwigTemplate_32051932ca08a8a5e69f5083a93f0b54405d71ba9750a3de04b435553f3
 <meta name=\"generator\" content=\"OctoberCMS\">
 <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/october.png'|theme }}\" />
 {% styles %}
-<link href=\"{{ [
+<!--
+    <link href=\"{{ [
     'assets/css/theme.css'
 ]|theme }}\" rel=\"stylesheet\">
+-->
 
-
- <link href=\"http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css\" rel=\"stylesheet\">
-        <link href=\"http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css\" rel=\"stylesheet\">
-        <script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>
-        <script src=\"http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js\"></script>", "C:\\xampp\\htdocs\\devmail/themes/rainlab-bonjour/partials/site/meta.htm", "");
+<link rel=\"stylesheet\" href=\"{{ 'assets/css/style.min.css'|theme }}\">
+<link rel=\"stylesheet\" href=\"{{ 'assets/tether/tether.min.css'|theme }}\">
+<link rel=\"stylesheet\" href=\"{{ 'assets/bootstrap/css/bootstrap.min.css'|theme }}\">
+<link rel=\"stylesheet\" href=\"{{ 'assets/bootstrap/css/bootstrap-grid.min.css'|theme }}\">
+<link rel=\"stylesheet\" href=\"{{ 'assets/bootstrap/css/bootstrap-reboot.min.css'|theme }}\">
+<link rel=\"stylesheet\" href=\"{{ 'assets/socicon/css/styles.css'|theme }}\">
+<link rel=\"stylesheet\" href=\"{{ 'assets/theme/css/style.css'|theme }}\">
+<link rel=\"stylesheet\" href=\"{{ 'assets/mobirise/css/mbr-additional.css'|theme }}\" type=\"text/css\">", "C:\\xampp\\htdocs\\devmail/themes/rainlab-bonjour/partials/site/meta.htm", "");
     }
 }
